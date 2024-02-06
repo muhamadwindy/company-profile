@@ -316,3 +316,18 @@ td {
 figure img {
   border-radius: 50%;
 }
+
+/* Iki aku nambahi fitur kanggo ben ono progress bar e pas di scroll */
+#scroll-indicator {
+  height: 5px;
+  width: 100%;
+  position: fixed;
+  top: 5rem;
+}
+
+#scroll-indicator #progress-bar {
+  height: 100%;
+  width: 0;
+  box-shadow: 10px 5px 15px 3px white;
+  background: linear-gradient(to right, #8439ca, indigo);
+}

@@ -90,3 +90,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+/* Iki aku nambahi fitur kanggo ben ono progress bar e pas di scroll */
+const progressBar = document.querySelector("#progress-bar");
+const progresBarHeight =
+  document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const scrolled = (scrollTop / progresBarHeight) * 100;
+
+  progressBar.style.width = `${scrolled}%`;
+});
